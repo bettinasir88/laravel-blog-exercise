@@ -11,25 +11,19 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-
-    /* Admin */
-    Route::namespace('Admin')
-        ->prefix('admin')
-        ->middleware(['auth'])
-        ->group(function () {
-
-        /* Posts */
-        Route::resource('post', 'PostController');
-    });
-
-    /* Auth */
+/* Admin */
+Route::namespace('Admin')
+    ->prefix('admin')
+    ->middleware(['auth'])
+    ->group(function () {
 
     /* Posts */
-    Route::get('/', 'PostController@index')->name('posts.index');
-
-    Route::get('posts/{slug}', function (App\Post $post) {
-        //
-    })->name('posts.view');
+    Route::resource('post', 'PostController');
 });
+
+/* Posts */
+Route::get('/', 'PostController@index')->name('homepage');
+Route::get('posts', 'PostController@index')->name('posts.index');
+Route::get('posts/{post}', 'PostController@show')->name('posts.view');
+
+/* Auth */

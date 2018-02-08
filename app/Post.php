@@ -2,11 +2,11 @@
 
 namespace App;
 
-use Eloquent;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Jenssegers\Mongodb\Eloquent\HybridRelations;
+use MongoEloquent;
 
-class Post extends Eloquent
+class Post extends MongoEloquent
 {
     use HybridRelations, SoftDeletes;
 

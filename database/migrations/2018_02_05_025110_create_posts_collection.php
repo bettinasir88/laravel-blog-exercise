@@ -13,9 +13,9 @@ class CreatePostsCollection extends Migration
      */
     public function up()
     {
-        // Schema::create('posts', function (Blueprint $collection) {
-        //     $collection->unique('slug');
-        // });
+        Schema::connection('mongodb')->create('posts', function (Blueprint $collection) {
+            $collection->unique('slug');
+        });
     }
 
     /**
