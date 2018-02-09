@@ -24,8 +24,9 @@ class Post extends MongoEloquent
      */
     protected $fillable = [
         'title',
+        'slug',
         'text',
-        'published',
+        'is_published',
     ];
 
     /**

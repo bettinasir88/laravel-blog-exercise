@@ -7,5 +7,13 @@ use App\Http\Controllers\Controller;
 
 class DashboardController extends Controller
 {
-    //
+    /**
+     * Display the dashboard
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        return view('Admin.dashboard');
+    }
 }

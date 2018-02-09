@@ -6,20 +6,8 @@
     <meta name="description" content="A layout example that shows a blog page with a list of posts.">
     <title>{{ config('app.name') }}</title>
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
-
-    <!--[if lte IE 8]>
-        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-old-ie-min.css">
-    <![endif]-->
-    <!--[if gt IE 8]><!-->
-        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
-    <!--<![endif]-->
-
-    <!--[if lte IE 8]>
-        <link rel="stylesheet" href="/css/layouts/blog-old-ie.css">
-    <![endif]-->
-    <!--[if gt IE 8]><!-->
-        <link rel="stylesheet" href="/css/blog.css">
-    <!--<![endif]-->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+    <link rel="stylesheet" href="/css/blog.css">
 </head>
 <body>
 

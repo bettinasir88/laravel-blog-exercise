@@ -14,11 +14,14 @@
 /* Admin */
 Route::namespace('Admin')
     ->prefix('admin')
-    ->middleware(['auth'])
+    // ->middleware(['auth'])
     ->group(function () {
 
+    /* Dashboard */
+    Route::get('/', 'DashboardController@index')->name('admin.dashboard');
+
     /* Posts */
-    Route::resource('post', 'PostController');
+    Route::resource('post', 'PostController', ['except' => ['show']]);
 });
 
 /* Posts */

@@ -16,10 +16,12 @@ class PostController extends Controller
      */
     public function index()
     {
-        // TODO: Just fetch one author
-        $posts = Post::where('is_published', true)
-            ->orderBy('created_at', 'DESC')
-            ->get();
+        $posts = Post::whereHas('user', function ($query) {
+            $query->where('email', 'admin@admin.com');
+        })
+        ->where('is_published', true)
+        ->orderBy('created_at', 'DESC')
+        ->get();
 
         return view('Blog.Post.index', ['posts' => $posts]);
     }
