@@ -32,6 +32,8 @@ class PostController extends Controller
      */
     public function create()
     {
+        $post = new Post();
+
         return view('Admin.Post.create', ['post' => $post]);
     }
 
@@ -48,7 +50,7 @@ class PostController extends Controller
 
         Post::create($data);
 
-        return redirect()->route('post.index');
+        return redirect()->route('admin.posts.index');
     }
 
     /**
@@ -77,7 +79,7 @@ class PostController extends Controller
         $post->slug = str_slug($post->title);
         $post->save();
 
-        return redirect()->route('post.index');
+        return redirect()->route('admin.posts.index');
     }
 
     /**
@@ -90,6 +92,6 @@ class PostController extends Controller
     {
         $post->delete();
 
-        return redirect()->route('post.index');
+        return redirect()->route('admin.posts.index');
     }
 }

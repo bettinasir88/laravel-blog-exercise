@@ -21,12 +21,19 @@ Route::namespace('Admin')
     Route::get('/', 'DashboardController@index')->name('admin.dashboard');
 
     /* Posts */
-    Route::resource('post', 'PostController', ['except' => ['show']]);
+    Route::resource('posts', 'PostController', ['except' => ['show'], 'names' => [
+        'index'   => 'admin.posts.index',
+        'create'  => 'admin.posts.create',
+        'store'   => 'admin.posts.store',
+        'edit'    => 'admin.posts.edit',
+        'update'  => 'admin.posts.update',
+        'destroy' => 'admin.posts.destroy',
+    ]]);
 });
 
 /* Posts */
 Route::get('/', 'PostController@index')->name('homepage');
 Route::get('posts', 'PostController@index')->name('posts.index');
-Route::get('posts/{post}', 'PostController@show')->name('posts.view');
+Route::get('posts/{post}', 'PostController@show')->name('posts.show');
 
 /* Auth */

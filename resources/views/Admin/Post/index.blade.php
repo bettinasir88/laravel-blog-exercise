@@ -10,7 +10,7 @@
 
     <div class="content">
         <div class="pure-button-group" role="group">
-            <a href="{{ route('post.create') }}" class="pure-button" role="button">Create a post</a>
+            <a href="{{ route('admin.posts.create') }}" class="pure-button" role="button">Create a post</a>
         </div>
         <table class="pure-table pure-table-bordered">
             <thead>
@@ -25,7 +25,7 @@
             <tbody>
                 @foreach ($posts as $post)
                     <tr>
-                        <td><a href="{{ route('post.edit', ['post' => $post->slug]) }}">{{ $post->title }}</a></td>
+                        <td><a href="{{ route('admin.posts.edit', ['post' => $post->slug]) }}">{{ $post->title }}</a></td>
                         <td>{{ $post->slug }}</td>
                         <td>{{ $post->is_published ? 'Yes' : 'No' }}</td>
                         <td>{{ $post->updated_at->format('d-m-Y H:i') }}</td>

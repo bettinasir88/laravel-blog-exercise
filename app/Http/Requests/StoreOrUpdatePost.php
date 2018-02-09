@@ -24,9 +24,9 @@ class StoreOrUpdatePost extends FormRequest
     public function rules()
     {
         return [
-            'title'        => 'required|unique:posts|max:255',
+            'title'        => 'required|unique:mongodb.posts|max:255',
             'text'         => 'required',
-            'is_published' => 'required|boolean',
+            'is_published' => 'boolean',
         ];
     }
 }

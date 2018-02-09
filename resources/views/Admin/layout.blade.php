@@ -22,7 +22,7 @@
             <a class="pure-menu-heading" href="{{ route('admin.dashboard') }}">Blog admin</a>
 
             <ul class="pure-menu-list">
-                <li class="pure-menu-item"><a href="{{ route('post.index') }}" class="pure-menu-link">Posts</a></li>
+                <li class="pure-menu-item"><a href="{{ route('admin.posts.index') }}" class="pure-menu-link">Posts</a></li>
             </ul>
         </div>
     </div>

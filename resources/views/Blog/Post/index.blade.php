@@ -9,7 +9,7 @@
         <section class="post">
             <header class="post-header">
                 <h2 class="post-title">
-                    <a href="{{ route('posts.view', ['post' => $post->slug]) }}">{{ $post->title }}</a>
+                    <a href="{{ route('posts.show', ['post' => $post->slug]) }}">{{ $post->title }}</a>
                 </h2>
 
                 @if ($post->user)
