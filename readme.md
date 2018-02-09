@@ -90,9 +90,11 @@ The CSS Framework used is [Pure CSS](https://purecss.io)
 
 ## TODO
 
-- [ ] Authentication
+- [ ] Authentication to access the admin section
 - [ ] Generate slug automatically from title on post save
-- [ ] Use different request validation rules on post save and post update (the unique title rule is an issue if applied on post update)
+- [ ] Use different request validation rules on post save and post update (the 'unique' rule on the title field is an issue if also applied on post update)
 - [ ] Flash messages (after deleting, creating or updating a post)
+- [ ] Confirmation prompt before deleting a post
 - [ ] Fetching posts via a repository class
-- [ ] Tests
+- [ ] Tests (PHPUnit and Behat)
+- [ ] Add a Vagrant VM
