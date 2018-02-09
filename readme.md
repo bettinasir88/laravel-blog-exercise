@@ -21,15 +21,14 @@ Require manual installation:
 
 ### Instructions
 
-- Clone the repo and copy the environment file
+Clone the repo and copy the environment file
 ```
 git clone git@github.com:bettinasir88/laravel-blog-exercise.git && cd laravel-blog-exercise && cp .env.example .env
 ```
 
-- Install [Laravel Homestead](https://laravel.com/docs/5.5/homestead)
+Install [Laravel Homestead](https://laravel.com/docs/5.5/homestead)
 
-
-Now SSH into the Homestead VM and do the following:
+__Now SSH into the Homestead VM and do the following:__
 
 Install Open SSL libraries
 ```
