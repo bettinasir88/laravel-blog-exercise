@@ -17,62 +17,65 @@ Provisioned in Laravel Homestead:
 Require manual installation:
 - MongoDB (v3.4)
 
+---
+
 ### Instructions
 
-- Clone the repo and copy environment file
+- Clone the repo and copy the environment file
 ```
 git clone git@github.com:bettinasir88/laravel-blog-exercise.git && cd laravel-blog-exercise && cp .env.example .env
 ```
 
 - Install [Laravel Homestead](https://laravel.com/docs/5.5/homestead)
 
-SSH into the Homestead VM and:
 
-- Install Open SSL libraries
+Now SSH into the Homestead VM and do the following:
+
+Install Open SSL libraries
 ```
 sudo apt-get install pkg-config libssl-dev libsslcommon2-dev
 ```
 
-- Install mongodb following [these instructions](https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-ubuntu-16-04)
+Install mongodb following [these instructions](https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-ubuntu-16-04)
 
-- Install mongodb client to interact with the database via command line (optional)
+Install mongodb client to interact with the database via command line (optional)
 ```
 sudo apt install mongodb-clients
 ```
 
-- Install mongodb PHP extension
+Install mongodb PHP extension
 ```
 sudo pecl install mongodb
 ```
 
-- Enable the PHP extension by editing these files:
+Enable the PHP extension by editing these files:
 ```
 /etc/php/7.2/cli/php.ini
 /etc/php/7.2/fpm/php.ini
 ```
 
-- And adding this line to them where the extensions are listed:
+And adding this line to them where the extensions are listed:
 ```
 extension=mongodb.so
 ```
 
-- Reload and Restart PHP
+Reload and Restart PHP
 ```
 sudo /etc/init.d/php7.2-fpm reload
 sudo /etc/init.d/php7.2-fpm restart
 ```
 
-- Run composer install in the project root folder
+Run composer install in the project root folder
 ```
 composer install
 ```
 
-- Migrate and seed
+Migrate and seed
 ```
 php artisan migrate --seed
 ```
 
-- Done!! Now go to:
+Done!! Now go to:
 ```
 http://homestead.test/
 http://homestead.test/admin
