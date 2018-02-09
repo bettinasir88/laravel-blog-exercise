@@ -12,11 +12,9 @@
                     <a href="{{ route('posts.show', ['post' => $post->slug]) }}">{{ $post->title }}</a>
                 </h2>
 
-                @if ($post->user)
-                    <p class="post-meta">
-                        By {{ $post->user->name }}
-                    </p>
-                @endif
+                <p class="post-meta">
+                    By {{ $post->user->name }}
+                </p>
             </header>
 
             <div class="post-description">

@@ -12,17 +12,6 @@
 <body>
 
 <div id="layout" class="pure-g">
-    <div class="">
-        @if (Route::has('login'))
-            <div class="">
-                @guest
-                    <a href="{{ route('login') }}">Login</a>
-                @endguest
-
-                <a href="{{ route('posts.index') }}">Posts</a>
-            </div>
-        @endif
-    </div>
     <div class="sidebar pure-u-1 pure-u-md-1-4">
         <div class="header">
             <h1 class="brand-title">{{ config('app.name') }}</h1>

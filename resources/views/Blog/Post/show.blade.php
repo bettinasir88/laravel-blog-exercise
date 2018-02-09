@@ -7,11 +7,9 @@
         <header class="post-header">
             <h2 class="post-title">{{ $post->title }}</h2>
 
-            @if ($post->user)
-                <p class="post-meta">
-                    By {{ $post->user->name }}
-                </p>
-            @endif
+            <p class="post-meta">
+                By {{ $post->user->name }}
+            </p>
         </header>
 
         <div class="post-description">
