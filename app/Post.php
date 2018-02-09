@@ -2,8 +2,8 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\SoftDeletes;
 use Jenssegers\Mongodb\Eloquent\HybridRelations;
+use Jenssegers\Mongodb\Eloquent\SoftDeletes;
 use MongoEloquent;
 
 class Post extends MongoEloquent

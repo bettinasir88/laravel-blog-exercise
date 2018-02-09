@@ -29,7 +29,11 @@
                         <td>{{ $post->slug }}</td>
                         <td>{{ $post->is_published ? 'Yes' : 'No' }}</td>
                         <td>{{ $post->updated_at->format('d-m-Y H:i') }}</td>
-                        <td>Delete</td>
+                        <td>
+                            {{ Form::open(['route' => ['admin.posts.destroy', $post->slug], 'method' => 'delete']) }}
+                                {{ Form::submit('Delete', ['class' => 'pure-button']) }}
+                            {{ Form::close() }}
+                        </td>
                     </tr>
                 @endforeach
             </tbody>
