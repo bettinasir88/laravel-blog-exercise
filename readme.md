@@ -91,6 +91,7 @@ The CSS Framework used is [Pure CSS](https://purecss.io)
 ## TODO
 
 - [ ] Authentication to access the admin section
+- [ ] Once authentication is done, assign the logged in user as the owner of the post when creating one
 - [ ] Generate slug automatically from title on post save
 - [ ] Use different request validation rules on post save and post update (the 'unique' rule on the title field is an issue if also applied on post update)
 - [ ] Flash messages (after deleting, creating or updating a post)
